@@ -1,5 +1,5 @@
 # Default ignore
-workspace.xml
+.idea/workspace.xml
 
 # Compiled class file
 *.class
@@ -37,3 +37,6 @@ buildNumber.properties
 .mvn/timing.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
+
+# Custom
+.idea/
