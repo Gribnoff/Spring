@@ -1,0 +1,28 @@
+CREATE TABLE `products` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `price` double unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+insert into products (`title`, `price`)
+values 	('Робот-пылесос Xiaomi Mi Robot Vacuum Cleaner', 15827),
+		('Телевизор LG NanoCell 65SM8200 65" (2019)', 53000),
+		('Телевизор Samsung UE55RU7400U 54.6" (2019)', 39782),
+		('Телевизор LG 49UM7450 49" (2019)', 26734),
+		('Машинка для стрижки Braun HC 5010', 2700),
+		('Смартфон Samsung Galaxy A10', 7150),
+		('Портативная акустика JBL Charge 4', 6049),
+		('Наушники Apple AirPods 2', 9290),
+		('Пылесос Samsung VC20M25', 4450),
+		('Смартфон Samsung Galaxy A51 128GB', 18760),
+		('Машинка для стрижки MOSER 1400-0051 Edition', 1626),
+		('Телевизор LG 55UM7450 55" (2019)', 33499),
+		('Смартфон Samsung Galaxy Note 10+ 12/512GB', 61890),
+		('Браслет Xiaomi Mi Band 4', 1617),
+		('Смартфон Xiaomi Redmi Note 8T 4/64GB', 11590),
+		('Смартфон Hisense Rock 5 4/64GB', 6990),
+		('Наушники HUAWEI FreeBuds 3', 8578),
+		('Наушники Sony WH-1000XM3', 13890),
+		('Смартфон Prestigio Grace M5 LTE', 3449),
+		('Смартфон VERTEX Impress Vira', 3290);
