@@ -21,6 +21,10 @@
         Authenticated user roles:
         <div sec:authentication="principal.authorities"></div>
     </div>
+
+    <div sec:authorize="hasRole('ADMIN')">
+        This content will only be visible to ADMIN users.
+    </div>
 </div>
 </body>
 </html>
