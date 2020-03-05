@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add new book</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.4.1/dist/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/4.4.1-1/js/bootstrap.min.js}"></script>
+
+    <link type="text/css" rel="stylesheet" th:href="@{/webjars/bootstrap/4.4.1-1/css/bootstrap.min.css}"/>
+</head>
+
+<html>
+    <body>
+        <form th:action="@{/books/add}" th:object="${book}" method="post">
+            Book Title: <input type="text" th:field="*{title}"/> <br>
+            Year of issue: <input type="text" th:field="*{year}"/> <br>
+            Short description: <input type="text" th:field="*{shortDesc}"/> <br>
+            <div class="submit">
+                <button name="addBook" type="submit">Add book</button>
+            </div>
+        </form>
+    </body>
+</html>
