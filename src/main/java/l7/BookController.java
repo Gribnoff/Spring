@@ -1,6 +1,7 @@
 package l7;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +21,7 @@ class BookController {
     }
 
     @SuppressWarnings("unused")
-    @GetMapping("/catalog")
+    @GetMapping(value = "/catalog", produces = MediaType.IMAGE_PNG_VALUE)
     public String showCatalog(Model model) {
         model.addAttribute("books", bookService.getBookList());
         return "books-list";

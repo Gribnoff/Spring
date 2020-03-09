@@ -21,18 +21,19 @@
             <thead>
                 <tr class="thead-dark">
                     <td>Id</td>
+                    <td>Image</td>
                     <td>Title</td>
                     <td>Year</td>
                     <td>Short description</td>
                 </tr>
             </thead>
 
-            <tr th:each="book : ${books}">
-                <td th:text="${book.id}"/>
-                <td th:
-                <td th:text="${book.title}"/>
-                <td th:text="${book.year}"/>
-                <td th:text="${book.shortDesc}"/>
+            <tr th:each="book : ${books}" th:object="${book}">
+                <td th:text="*{id}"/>
+                <td th:if="*{images.size() > 0}" th:src="@{'/images/' + *{images[0].path}}" />
+                <td th:text="*{title}"/>
+                <td th:text="*{year}"/>
+                <td th:text="*{shortDesc}"/>
             </tr>
         </table>
 

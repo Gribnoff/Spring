@@ -3,6 +3,7 @@ package l7;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "books")
@@ -11,7 +12,7 @@ class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private Long id;
 
     @Column(name = "title")
     private String title;
@@ -22,11 +23,17 @@ class Book {
     @Column(name = "short_description")
     private String shortDesc;
 
-    public int getId() {
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "book")
+    private List<BookImage> images;
+
+    public Book() {
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -54,6 +61,11 @@ class Book {
         this.shortDesc = shortDesc;
     }
 
-    public Book() {
+    public List<BookImage> getImages() {
+        return images;
+    }
+
+    public void setImages(List<BookImage> images) {
+        this.images = images;
     }
 }
